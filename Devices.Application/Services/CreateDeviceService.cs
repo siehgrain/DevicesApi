@@ -10,22 +10,21 @@ using System.Threading.Tasks;
 namespace Devices.Application.Services
 {
     public class CreateDeviceService
+{
+    private readonly IDeviceRepository _repository;
+
+    public CreateDeviceService(IDeviceRepository repository)
     {
-        private readonly IDeviceRepository _repository;
-
-        public CreateDeviceService(IDeviceRepository repository)
-        {
-            _repository = repository;
-        }
-
-        public async Task ExecuteAsync(CreateDeviceRequest request)
-        {
-            var device = new Device(
-                request.Name,
-                request.Brand
-            );
-
-            await _repository.AddAsync(device);
-        }
+        _repository = repository;
     }
+
+    public async Task<Device> CreateAsync(CreateDeviceRequest request)
+    {
+        var device = new Device(request.Name, request.Brand);
+
+        await _repository.AddAsync(device);
+
+        return device;
+    }
+}
 }

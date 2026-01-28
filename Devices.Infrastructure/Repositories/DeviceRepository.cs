@@ -17,26 +17,13 @@ public class DeviceRepository : IDeviceRepository
 
     public async Task AddAsync(Device device)
     {
-        await _context.Devices.AddAsync(device);
-        await _context.SaveChangesAsync();
-    }
-
-    public async Task UpdateAsync(Device device)
-    {
-        _context.Devices.Update(device);
-        await _context.SaveChangesAsync();
-    }
-
-    public async Task DeleteAsync(Device device)
-    {
-        _context.Devices.Remove(device);
+        _context.Devices.Add(device);
         await _context.SaveChangesAsync();
     }
 
     public async Task<Device?> GetByIdAsync(Guid id)
     {
-        return await _context.Devices
-            .FirstOrDefaultAsync(d => d.Id == id);
+        return await _context.Devices.FindAsync(id);
     }
 
     public async Task<IEnumerable<Device>> GetAllAsync()
@@ -56,5 +43,17 @@ public class DeviceRepository : IDeviceRepository
         return await _context.Devices
             .Where(d => d.State == state)
             .ToListAsync();
+    }
+
+    public async Task UpdateAsync(Device device)
+    {
+        _context.Devices.Update(device);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task DeleteAsync(Device device)
+    {
+        _context.Devices.Remove(device);
+        await _context.SaveChangesAsync();
     }
 }

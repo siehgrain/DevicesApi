@@ -22,8 +22,10 @@ builder.Services.AddDbContext<DevicesDbContext>(options =>
 // DI
 builder.Services.AddScoped<IDeviceRepository, DeviceRepository>();
 builder.Services.AddScoped<CreateDeviceService>();
+builder.Services.AddScoped<GetDevicesService>();
+builder.Services.AddHealthChecks();
 
-var app = builder.Build();
+var app = builder.Build();  
 
 if (app.Environment.IsDevelopment())
 {
@@ -32,6 +34,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapHealthChecks("/health");
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
