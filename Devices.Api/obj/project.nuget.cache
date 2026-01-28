@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iz1ST8+Yw4s=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\leona\\source\\repos\\Devices.Api\\Devices.Api\\Devices.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\leona\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.22.1\\microsoft.visualstudio.azure.containers.tools.targets.1.22.1.nupkg.sha512"
+  ],
+  "logs": []
+}
