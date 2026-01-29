@@ -1,6 +1,8 @@
 ﻿using Devices.Application.DTOs;
+using Devices.Application.Interfaces;
 using Devices.Application.Services;
 using Devices.Domain.Enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Devices.Api.Controllers;
@@ -9,16 +11,16 @@ namespace Devices.Api.Controllers;
 [Route("api/[controller]")]
 public class DevicesController : ControllerBase
 {
-    private readonly CreateDeviceService _createDeviceService;
-    private readonly UpdateDeviceService _updateDeviceService;
-    private readonly GetDevicesService _getDeviceService;
-    private readonly DeleteDeviceService _deleteDeviceService;
+    private readonly ICreateDeviceService _createDeviceService;
+    private readonly IUpdateDeviceService _updateDeviceService;
+    private readonly IGetDevicesService _getDeviceService;
+    private readonly IDeleteDeviceService _deleteDeviceService;
 
     public DevicesController(
-        CreateDeviceService createDeviceService,
-        UpdateDeviceService updateDeviceService,
-        GetDevicesService getDeviceService,
-        DeleteDeviceService deleteDeviceService)
+        ICreateDeviceService createDeviceService,
+        IUpdateDeviceService updateDeviceService,
+        IGetDevicesService getDeviceService,
+        IDeleteDeviceService deleteDeviceService)
     {
         _createDeviceService = createDeviceService;
         _updateDeviceService = updateDeviceService;
@@ -32,7 +34,7 @@ public class DevicesController : ControllerBase
         var id = await _createDeviceService.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id }, null);
     }
-
+    [Authorize]
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateDeviceDto dto)
     {
@@ -43,7 +45,7 @@ public class DevicesController : ControllerBase
 
         return NoContent();
     }
-
+    [Authorize]
     [HttpPatch("{id}")]
     public async Task<IActionResult> Patch(int id, [FromBody] UpdateDeviceDto dto)
     {
@@ -54,7 +56,7 @@ public class DevicesController : ControllerBase
 
         return NoContent();
     }
-
+    [Authorize]
     [HttpGet("id/{id}")]
     public async Task<ActionResult<DeviceResponseDto>> GetById(int id)
     {
@@ -65,6 +67,7 @@ public class DevicesController : ControllerBase
 
         return Ok(device);
     }
+    [Authorize]
     [HttpGet("brand/{brand}")]
     public async Task<ActionResult<DeviceResponseDto>> GetByBrand(string brand)
     {
@@ -75,6 +78,7 @@ public class DevicesController : ControllerBase
 
         return Ok(device);
     }
+    [Authorize]
     [HttpGet("state/{state}")]
     public async Task<ActionResult<DeviceResponseDto>> GetByState(DeviceState state)
     {
@@ -85,14 +89,14 @@ public class DevicesController : ControllerBase
 
         return Ok(device);
     }
-
+    [Authorize]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<DeviceResponseDto>>> GetAll()
     {
         var devices = await _getDeviceService.GetAllAsync();
         return Ok(devices);
     }
-
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {

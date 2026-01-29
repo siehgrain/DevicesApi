@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Devices.Application.Services
 {
-    public class UpdateDeviceService
+    public class UpdateDeviceService : IUpdateDeviceService
     {
         private readonly IDeviceRepository _repository;
 

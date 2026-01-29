@@ -17,11 +17,18 @@ namespace Devices.Domain.Entities
         public DateTime CreatedAt { get; private set; }
         public Device(string name, string brand)
         {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new DomainException("Device name is required");
+
+            if (string.IsNullOrWhiteSpace(brand))
+                throw new DomainException("Device brand is required");
+
             Name = name;
             Brand = brand;
             State = DeviceState.Available;
             CreatedAt = DateTime.UtcNow;
         }
+
         public void Update(string name, string brand)
         {
             if (State == DeviceState.InUse)
@@ -33,14 +40,12 @@ namespace Devices.Domain.Entities
 
         public void ChangeState(DeviceState newState)
         {
+            if (!Enum.IsDefined(typeof(DeviceState), newState))
+                throw new DomainException("Invalid device state");
+
             State = newState;
         }
 
-        public void EnsureCanBeDeleted()
-        {
-            if (State == DeviceState.InUse)
-                throw new DomainException("Device in use cannot be deleted");
-        }
 
     }
 }

@@ -37,6 +37,27 @@ public class DeviceTests
         Assert.Equal("Galaxy", device.Name);
         Assert.Equal("Samsung", device.Brand);
     }
+    [Fact]
+    public void Invalid_DeviceState_Should_Throw_Exception()
+    {
+        var device = new Device("iPhone", "Apple");
 
+        void Act() => device.ChangeState((DeviceState)999);
 
+        Assert.Throws<DomainException>(Act);
+    }
+    [Fact]
+    public void Device_Name_Cannot_Be_Empty()
+    {
+        void Act() => new Device("", "Apple");
+
+        Assert.Throws<DomainException>(Act);
+    }
+    [Fact]
+    public void Device_Brand_Cannot_Be_Empty()
+    {
+        void Act() => new Device("iPhone", "");
+
+        Assert.Throws<DomainException>(Act);
+    }
 }

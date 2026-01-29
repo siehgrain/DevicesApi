@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace Devices.Application.Services
 {
-    public class CreateDeviceService
-{
+    public class CreateDeviceService : ICreateDeviceService
+    {
     private readonly IDeviceRepository _repository;
 
     public CreateDeviceService(IDeviceRepository repository)

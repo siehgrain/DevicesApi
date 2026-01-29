@@ -4,7 +4,7 @@ using Devices.Domain.Enums;
 
 namespace Devices.Application.Services;
 
-public class GetDevicesService
+public class GetDevicesService : IGetDevicesService
 {
     private readonly IDeviceRepository _repository;
 

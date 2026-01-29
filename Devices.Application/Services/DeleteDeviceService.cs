@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Devices.Application.Services
 {
-    public class DeleteDeviceService
+    public class DeleteDeviceService : IDeleteDeviceService
     {
         private readonly IDeviceRepository _repository;
 
