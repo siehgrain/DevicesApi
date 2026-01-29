@@ -7,7 +7,7 @@ public interface IDeviceRepository
 {
     Task AddAsync(Device device);
 
-    Task<Device?> GetByIdAsync(Guid id);
+    Task<Device?> GetByIdAsync(int id);
     Task<IEnumerable<Device>> GetAllAsync();
     Task<IEnumerable<Device>> GetByBrandAsync(string brand);
     Task<IEnumerable<Device>> GetByStateAsync(DeviceState state);

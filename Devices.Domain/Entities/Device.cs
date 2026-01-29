@@ -10,14 +10,13 @@ namespace Devices.Domain.Entities
 {
     public class Device
     {
-        public Guid Id { get; private set; }
+        public int Id { get; private set; }
         public string Name { get; private set; }
         public string Brand { get; private set; }
         public DeviceState State { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public Device(string name, string brand)
         {
-            Id = Guid.NewGuid();
             Name = name;
             Brand = brand;
             State = DeviceState.Available;

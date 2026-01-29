@@ -22,6 +22,8 @@ namespace Devices.Infrastructure.Persistence
             modelBuilder.Entity<Device>(entity =>
             {
                 entity.HasKey(d => d.Id);
+                entity.Property(d => d.Id)
+                    .ValueGeneratedOnAdd();
 
                 entity.Property(d => d.Name)
                     .IsRequired()
