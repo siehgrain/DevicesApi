@@ -10,6 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DB\**" />
+    <Content Remove="DB\**" />
+    <EmbeddedResource Remove="DB\**" />
+    <None Remove="DB\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
 
     <PackageReference Include="Microsoft.OpenApi" Version="1.6.22" />
@@ -29,10 +36,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Devices.Application\Devices.Application.csproj" />
     <ProjectReference Include="..\Devices.Infrastructure\Devices.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="DB\" />
   </ItemGroup>
 
 </Project>

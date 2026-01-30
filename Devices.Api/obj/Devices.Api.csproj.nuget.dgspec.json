@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Api\\Devices.Api.csproj": {}
+    "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Api\\Devices.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Api\\Devices.Api.csproj": {
+    "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Api\\Devices.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Api\\Devices.Api.csproj",
+        "projectUniqueName": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Api\\Devices.Api.csproj",
         "projectName": "Devices.Api",
-        "projectPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Api\\Devices.Api.csproj",
+        "projectPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Api\\Devices.Api.csproj",
         "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Api\\obj\\",
+        "outputPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Application\\Devices.Application.csproj": {
-                "projectPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Application\\Devices.Application.csproj"
+              "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Application\\Devices.Application.csproj": {
+                "projectPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Application\\Devices.Application.csproj"
               },
-              "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Infrastructure\\Devices.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Infrastructure\\Devices.Infrastructure.csproj"
+              "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Infrastructure\\Devices.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Infrastructure\\Devices.Infrastructure.csproj"
               }
             }
           }
@@ -115,14 +115,14 @@
         }
       }
     },
-    "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Application\\Devices.Application.csproj": {
+    "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Application\\Devices.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Application\\Devices.Application.csproj",
+        "projectUniqueName": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Application\\Devices.Application.csproj",
         "projectName": "Devices.Application",
-        "projectPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Application\\Devices.Application.csproj",
+        "projectPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Application\\Devices.Application.csproj",
         "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Application\\obj\\",
+        "outputPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -143,8 +143,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj": {
-                "projectPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj"
+              "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj": {
+                "projectPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj"
               }
             }
           }
@@ -184,14 +184,14 @@
         }
       }
     },
-    "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj": {
+    "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj",
         "projectName": "Devices.Domain",
-        "projectPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj",
+        "projectPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj",
         "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Domain\\obj\\",
+        "outputPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -249,14 +249,14 @@
         }
       }
     },
-    "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Infrastructure\\Devices.Infrastructure.csproj": {
+    "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Infrastructure\\Devices.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Infrastructure\\Devices.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Infrastructure\\Devices.Infrastructure.csproj",
         "projectName": "Devices.Infrastructure",
-        "projectPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Infrastructure\\Devices.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Infrastructure\\Devices.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -277,11 +277,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Application\\Devices.Application.csproj": {
-                "projectPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Application\\Devices.Application.csproj"
+              "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Application\\Devices.Application.csproj": {
+                "projectPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Application\\Devices.Application.csproj"
               },
-              "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj": {
-                "projectPath": "C:\\Users\\leona\\source\\repos\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj"
+              "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj": {
+                "projectPath": "C:\\Users\\leona\\Desktop\\DevicesTest\\DevicesApi\\Devices.Domain\\Devices.Domain.csproj"
               }
             }
           }

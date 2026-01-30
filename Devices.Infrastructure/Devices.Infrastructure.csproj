@@ -7,12 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Devices.Application\Devices.Application.csproj" />
-    <ProjectReference Include="..\Devices.Domain\Devices.Domain.csproj" />
+    <Compile Remove="Configurations\**" />
+    <EmbeddedResource Remove="Configurations\**" />
+    <None Remove="Configurations\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configurations\" />
+    <ProjectReference Include="..\Devices.Application\Devices.Application.csproj" />
+    <ProjectReference Include="..\Devices.Domain\Devices.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -8,14 +8,11 @@ public class DeviceTests
     [Fact]
     public void Device_InUse_Cannot_Be_Updated()
     {
-        // ARRANGE: preparar o cenário
         var device = new Device("iPhone", "Apple");
-        device.ChangeState(DeviceState.InUse);
 
-        // ACT: ação que deve falhar
+        device.ChangeState(DeviceState.InUse);
         void Act() => device.Update("Galaxy", "Samsung");
 
-        // ASSERT: esperamos uma exceção de domínio
         Assert.Throws<DomainException>(Act);
     }
     [Fact]
@@ -23,8 +20,6 @@ public class DeviceTests
     {
         var device = new Device("iPhone", "Apple");
 
-        // Isso só compila se CreatedAt tiver setter público
-        // O teste passa simplesmente se não existir forma de mudar
         Assert.True(device.CreatedAt <= DateTime.UtcNow);
     }
     [Fact]
@@ -47,17 +42,14 @@ public class DeviceTests
         Assert.Throws<DomainException>(Act);
     }
     [Fact]
-    public void Device_Name_Cannot_Be_Empty()
+    public void Device_Constructor_Should_Throw_If_Name_Empty()
     {
-        void Act() => new Device("", "Apple");
-
-        Assert.Throws<DomainException>(Act);
+        Assert.Throws<DomainException>(() => new Device("", "Apple"));
     }
-    [Fact]
-    public void Device_Brand_Cannot_Be_Empty()
-    {
-        void Act() => new Device("iPhone", "");
 
-        Assert.Throws<DomainException>(Act);
+    [Fact]
+    public void Device_Constructor_Should_Throw_If_Brand_Empty()
+    {
+        Assert.Throws<DomainException>(() => new Device("iPhone", "  "));
     }
 }

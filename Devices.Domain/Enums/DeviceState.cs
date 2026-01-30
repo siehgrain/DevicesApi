@@ -8,9 +8,9 @@ namespace Devices.Domain.Enums
 {
     public enum DeviceState
     {
-        Available,
-        InUse,
-        Inactive
+        Available = 0,
+        InUse = 1,
+        Inactive = 2
     }
 
 }
