@@ -5,12 +5,6 @@ This document provides a quick guide on how to run, test, and understand the API
 
 ---
 
-## Badges
-
-(Add CI/CD, test coverage, and .NET version badges as available.)
-
----
-
 ## Table of Contents
 
 * [Overview](#overview)
