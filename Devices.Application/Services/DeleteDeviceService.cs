@@ -1,5 +1,6 @@
 ﻿using Devices.Application.Interfaces;
 using Devices.Domain.Enums;
+using Devices.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace Devices.Application.Services
 
             // Regra: device in-use não pode ser deletado
             if (device.State == DeviceState.InUse)
-                throw new InvalidOperationException(
+                throw new DomainException(
                     "Device in use cannot be deleted");
 
             await _repository.DeleteAsync(device);

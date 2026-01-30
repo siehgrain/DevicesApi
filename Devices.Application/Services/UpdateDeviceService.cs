@@ -1,6 +1,7 @@
 ﻿using Devices.Application.DTOs;
 using Devices.Application.Interfaces;
 using Devices.Domain.Enums;
+using Devices.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,21 +22,27 @@ namespace Devices.Application.Services
         public async Task<bool> ExecuteAsync(int id, UpdateDeviceDto dto)
         {
             var device = await _repository.GetByIdAsync(id);
+            if (device is null) return false;
 
-            if (device is null)
-                return false;
+            bool isChangingName = dto.Name != null && dto.Name != device.Name;
+            bool isChangingBrand = dto.Brand != null && dto.Brand != device.Brand;
 
-            // Regra: name e brand não podem mudar se estiver in-use
-            if (device.State == DeviceState.InUse &&(dto.Name is not null || dto.Brand is not null))
+            if (device.State == DeviceState.InUse && (isChangingName || isChangingBrand))
             {
-                throw new InvalidOperationException(
-                    "Name and brand cannot be updated when device is in use");
+                throw new DomainException("Name and brand cannot be updated when device is in use");
             }
 
-            device.Update(dto.Name ?? device.Name,dto.Brand ?? device.Brand);
+            var finalName = dto.Name ?? device.Name ?? string.Empty;
+            var finalBrand = dto.Brand ?? device.Brand ?? string.Empty;
+
+            device.Update(finalName, finalBrand);
+
+            if (dto.State.HasValue)
+            {
+                device.ChangeState(dto.State.Value);
+            }
 
             await _repository.UpdateAsync(device);
-
             return true;
         }
     }
